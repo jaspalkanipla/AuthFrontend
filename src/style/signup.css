@@ -1,0 +1,74 @@
+
+.formWrapper {
+  background-image: linear-gradient(to bottom, #2d2e32, #0d0e14);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: calc(100vh - 56px);
+}
+.formCover {
+  border: 1px solid #373737;
+  border-radius: 20px;
+  width: 30%;
+}
+.formCover h2 {
+  color: #c6c0c0;
+}
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 10px;
+}
+span {
+  color: #be6854;
+}
+span:hover {
+  color: #dad4d2;
+  transition: color 0.3s ease-in-out; /* Apply ease-in-out transition to color */
+
+}
+input {
+  background-color: #1b1e24;
+  color: #e0dddd;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+input::placeholder {
+  color: #a5a4a4; /* Change to your desired color */
+}
+/* input:focus {
+  background-color:grey;
+  } */
+
+.formGroup button {
+  font-size: large;
+  margin-top: 5px;
+  padding: 15px;
+  width: 100%;
+  background-color: #8e3825;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+button:hover {
+  transition: background-color 0.4s ease-in-out; /* Apply ease-in-out transition to background-color */
+  background-color: #923e2b; /* New background color on hover */
+}
+.base {
+  color: #e0dddd;
+}
+.navLink {
+  color: #d16b6b;
+  /* display: block; */
+  font-size: large;
+  font-style: italic;
+}
+.navLink:hover {
+  color: #d8caca;
+}
