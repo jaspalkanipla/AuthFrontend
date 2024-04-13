@@ -15,11 +15,14 @@ export default function Signin() {
   const [formError, setformError] = useState({});
   const { euserEmail, euserPass } = formError;
   const [buttonState, setbuttonState] = useState(false);
+  const [borderOutline, setborderOutline] = useState("");
+
 
   let err = {};
   const f1 = () => {
     if (Object.keys(data).length > 0) {
       setformError({});
+      setborderOutline("");
     }
   };
 
@@ -27,13 +30,19 @@ export default function Signin() {
     const { name, value } = e.target;
     setdata({ ...data, [name]: value });
   };
+  let outlineColor = "1px solid #ba3b3b";
+
   const validation = () => {
     if (!userEmail) {
       err.euserEmail = "Enter Email";
       setformError(err);
+      setborderOutline(outlineColor);
+
     } else if (!userPass) {
       err.euserPass = "Enter Password";
       setformError(err);
+      setborderOutline(outlineColor);
+
     }
   };
   const handleSubmit = (e) => {
@@ -81,9 +90,11 @@ export default function Signin() {
               value={userEmail}
               onChange={handlechange}
               onInput={f1}
-              placeholder="Email"
+              placeholder={euserEmail ? euserEmail : "Email"}
+              style={euserEmail ? { outline: borderOutline } : {}}
+              className={euserEmail ? "red-placeholder" : ""}
             />
-            <span>{euserEmail}</span>
+            {/* <span>{euserEmail}</span> */}
           </div>
           <div className="formGroup">
             <input
@@ -92,9 +103,11 @@ export default function Signin() {
               value={userPass}
               onChange={handlechange}
               onInput={f1}
-              placeholder="Password"
+              placeholder={euserPass ? euserPass : "Password"}
+              style={euserPass ? { outline: borderOutline } : {}}
+              className={euserPass ? "red-placeholder" : ""}
             />
-            <span>{euserPass}</span>
+            {/* <span>{euserPass}</span> */}
           </div>
           <div className="formGroup">
             <button type="submit">SignIn</button>
