@@ -29,10 +29,10 @@ export default function Signin() {
   };
   const validation = () => {
     if (!userEmail) {
-      err.euserEmail = "enter Email";
+      err.euserEmail = "Enter Email";
       setformError(err);
     } else if (!userPass) {
-      err.euserPass = "enter password";
+      err.euserPass = "Enter Password";
       setformError(err);
     }
   };

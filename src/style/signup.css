@@ -36,12 +36,20 @@ input {
   color: #e0dddd;
   padding: 15px;
   width: 100%;
-  border: none;
   border-radius: 5px;
+  border: none;
+  /* outline: 1px solid #ba3b3b; */
+  /* border: 1px solid green; */
 }
 input::placeholder {
   color: #a5a4a4; /* Change to your desired color */
 }
+.red-placeholder::placeholder {
+  color: #ba3b3b;
+}
+
+
+
 /* input:focus {
   background-color:grey;
   } */
